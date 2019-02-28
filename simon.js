@@ -1,4 +1,4 @@
-(function() {
+var begin = function(){
 
   var pads = document.getElementsByClassName('pad'),
       display = document.getElementById('display'),
@@ -93,17 +93,20 @@
 
   function generatePattern() {
       var p = [];
-      for (var i = 0, l = (3 + level); i < l; i++) {
+      for (let i = 0, l = (3 + level); i < l; i++) {
           p.push(Math.floor(Math.random() * 3));
       }
       pattern = p.slice(0), hold = p.slice(0);
+      console.log(pattern);
   }
 
   function simonSays() {
       var current = pads[pattern.shift()];
+      console.log(current);
       playerMouseDown.apply(current);
       setTimeout(function() {
           simonMouseUp.apply(current);
+          console.log(current);
           if (pattern.length > 0) {
               setTimeout(simonSays, speed);
           } else {
@@ -143,4 +146,4 @@
 
   init();
 
-}());
+};

@@ -155,7 +155,7 @@ body {
 .simon .display {
     font-family: 'Press Start 2P', cursive;
     font-size: 17px;
-    line-height: 160%;
+    /* line-height: 160%; */
     position:absolute;
     cursor: pointer;
     display:block;
@@ -169,6 +169,9 @@ body {
     filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',endColorstr='#ededed',GradientType=1 );
     width:120px;
     padding-top:40px;/* dont remove */
+
+    /* CHANGED HEIGHT FROM 80px TO 120px FOR ROUNDED CENTER BUTTON */
+
     height:80px;
     -webkit-border-radius:60px;
     -moz-border-radius:60px;
